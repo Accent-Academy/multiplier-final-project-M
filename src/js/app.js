@@ -204,11 +204,24 @@ if (One_flag) {
   }
 }
 
-// const Left_above=document.querySelector(".left_above")
-// const Right_above=document.querySelector(".right_above")
-// const Left_bottom=document.querySelector(".left_bottom")
-// const Right_bottom=document.querySelector(".right_bottom")
+const Left_above = document.querySelector(".left_above");
+const Right_above = document.querySelector(".right_above");
+const Left_bottom = document.querySelector(".left_bottom");
+const Right_bottom = document.querySelector(".right_bottom");
 
-// .addEventListener("scroll",()=>{
-//     Left_above.style.opacity="0"
-// })
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+
+  console.log(scrollY);
+  if (window.scrollY > 7400 && window.scrollY < 8450) {
+    Left_above.classList.add("active020");
+    Left_bottom.classList.add("active020");
+    Right_above.classList.add("active020");
+    Right_bottom.classList.add("active020");
+  } else {
+    Left_above.classList.remove("active020");
+    Left_bottom.classList.remove("active020");
+    Right_above.classList.remove("active020");
+    Right_bottom.classList.remove("active020");
+  }
+});

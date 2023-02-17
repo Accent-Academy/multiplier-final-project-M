@@ -897,9 +897,9 @@ main .first_section .Infite_scroll {
   margin: 50px 0;
   overflow: hidden;
   /*.half {
-      float: left;
-      width: 10%;
-    }*/
+            float: left;
+            width: 10%;
+          }*/
 }
 @media (max-width: 1204px) {
   main .first_section .Infite_scroll {
@@ -1729,7 +1729,7 @@ main .organizations .items .big .mini .simvol .imgs img {
   object-fit: contain;
 }
 main .flags_and_text {
-  margin: 100px 0 900px 0;
+  margin: 100px 0 750px 0;
 }
 @media (max-width: 991px) {
   main .flags_and_text {
@@ -1868,14 +1868,12 @@ main .scroll_animation .items .body .top_card {
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  width: 480px;
-  height: 570px;
-  min-width: 480px;
-  padding: 30px 40px;
+  max-width: 480px;
+  padding: 50px 40px;
 }
 main .scroll_animation .items .body .top_card img {
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 main .scroll_animation .items .body .top_card h2 {
   color: #001c63;
@@ -1910,12 +1908,18 @@ main .scroll_animation .items .body .top_card button {
   cursor: pointer;
 }
 main .scroll_animation .items .body .left_above {
-  transition: 14s ease-in-out;
+  transition: 1s ease-in-out;
   left: 200px;
+  transform: translateX(230px);
   position: absolute;
   z-index: 5;
   width: 290px;
   height: 450px;
+}
+@media (max-width: 1250px) {
+  main .scroll_animation .items .body .left_above {
+    display: none;
+  }
 }
 main .scroll_animation .items .body .left_above img {
   width: 100%;
@@ -1929,11 +1933,18 @@ main .scroll_animation .items .body .left_above img:hover {
   box-shadow: 0px 0px 50px 0px #001c63;
 }
 main .scroll_animation .items .body .right_above {
+  transition: 1s ease-in-out;
+  transform: translateX(-230px);
   right: 200px;
   position: absolute;
   z-index: 5;
   width: 290px;
   height: 450px;
+}
+@media (max-width: 1250px) {
+  main .scroll_animation .items .body .right_above {
+    display: none;
+  }
 }
 main .scroll_animation .items .body .right_above img {
   width: 100%;
@@ -1948,10 +1959,17 @@ main .scroll_animation .items .body .right_above img:hover {
 }
 main .scroll_animation .items .body .left_bottom {
   left: 50px;
+  transition: 2s ease-in-out;
   position: absolute;
   z-index: -5;
   width: 250px;
   height: 290px;
+  transform: translateX(380px);
+}
+@media (max-width: 1250px) {
+  main .scroll_animation .items .body .left_bottom {
+    display: none;
+  }
 }
 main .scroll_animation .items .body .left_bottom img {
   width: 100%;
@@ -1965,11 +1983,18 @@ main .scroll_animation .items .body .left_bottom img:hover {
   box-shadow: 0px 0px 50px 0px #001c63;
 }
 main .scroll_animation .items .body .right_bottom {
+  transition: 2s ease-in-out;
   right: 50px;
   position: absolute;
   z-index: -5;
   width: 250px;
   height: 290px;
+  transform: translateX(-380px);
+}
+@media (max-width: 1250px) {
+  main .scroll_animation .items .body .right_bottom {
+    display: none;
+  }
 }
 main .scroll_animation .items .body .right_bottom img {
   width: 100%;
@@ -2306,5 +2331,9 @@ main footer .mobile .body .mini p {
 }
 
 .active010 {
-  display: none;
+  display: none !important;
+}
+
+.active020 {
+  transform: translate(0px) !important;
 } /*# sourceMappingURL=style.css.map */

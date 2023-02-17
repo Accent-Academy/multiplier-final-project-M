@@ -1058,7 +1058,7 @@ main {
   }
 
   .flags_and_text {
-    margin: 100px 0 900px 0;
+    margin: 100px 0 750px 0;
 
     @media (max-width: 991px) {
       display: none;
@@ -1217,14 +1217,13 @@ main {
           flex-direction: column;
           justify-content: center;
           background-color: white;
-          width: 480px;
-          height: 570px;
-          min-width: 480px;
-          padding: 30px 40px;
+          max-width: 480px;
+
+          padding: 50px 40px;
 
           img {
-            width: 200px;
-            height: 200px;
+            max-width: 200px;
+            max-height: 200px;
           }
 
           h2 {
@@ -1265,13 +1264,18 @@ main {
         }
 
         .left_above {
-          transition: 14s ease-in-out;
+          transition: 1s ease-in-out;
           left: 200px;
+          transform: translateX(230px);
 
           position: absolute;
           z-index: 5;
           width: 290px;
           height: 450px;
+
+          @media (max-width: 1250px) {
+            display: none;
+          }
 
           img {
             width: 100%;
@@ -1287,12 +1291,18 @@ main {
         }
 
         .right_above {
+          transition: 1s ease-in-out;
+          transform: translateX(-230px);
           right: 200px;
 
           position: absolute;
           z-index: 5;
           width: 290px;
           height: 450px;
+
+          @media (max-width: 1250px) {
+            display: none;
+          }
 
           img {
             width: 100%;
@@ -1309,11 +1319,16 @@ main {
 
         .left_bottom {
           left: 50px;
-
+          transition: 2s ease-in-out;
           position: absolute;
           z-index: -5;
           width: 250px;
           height: 290px;
+          transform: translateX(380px);
+
+          @media (max-width: 1250px) {
+            display: none;
+          }
 
           img {
             width: 100%;
@@ -1329,11 +1344,17 @@ main {
         }
 
         .right_bottom {
+          transition: 2s ease-in-out;
           right: 50px;
           position: absolute;
           z-index: -5;
           width: 250px;
           height: 290px;
+          transform: translateX(-380px);
+
+          @media (max-width: 1250px) {
+            display: none;
+          }
 
           img {
             width: 100%;
@@ -1732,5 +1753,9 @@ main {
 }
 
 .active010 {
-  display: none;
+  display: none !important;
+}
+
+.active020 {
+  transform: translate(0px) !important;
 }
