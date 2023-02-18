@@ -2433,9 +2433,9 @@ main .Infite_scroll {
   background-color: #01113b;
   overflow: hidden;
   /*.half {
-          float: left;
-          width: 10%;
-        }*/
+            float: left;
+            width: 10%;
+          }*/
 }
 @media (max-width: 1204px) {
   main .Infite_scroll {
@@ -2818,7 +2818,7 @@ main .banner9 {
 main .banner_swipper {
   margin: -150px 0;
 }
-@media (max-width: 1258px) {
+@media (max-width: 1024px) {
   main .banner_swipper {
     display: none;
   }
@@ -2837,7 +2837,7 @@ main .banner_swipper .items .swiper-slide {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 650px !important;
+  max-width: 650px !important;
   background-color: white;
   padding: 30px;
   border-radius: 15px;

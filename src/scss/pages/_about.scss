@@ -492,7 +492,7 @@ main {
   .banner_swipper {
     margin: -150px 0;
 
-    @media (max-width: 1258px) {
+    @media (max-width: 1024px) {
       display: none;
     }
     .items {
@@ -509,7 +509,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        width: 650px !important;
+        max-width: 650px !important;
 
         background-color: white;
         padding: 30px;
